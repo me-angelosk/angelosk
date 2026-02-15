@@ -1,0 +1,34 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name} from el!",
+
+	"link_label_home": "Αρχική",
+	"link_label_about": "Σχετικά",
+	"link_label_work": "",
+	"link_label_contact": "Επικοινωνία",
+	"link_label_privacy": "Πολιτική Απορρήτου",
+
+	"home_meta_title": "Angelos K.",
+	"home_meta_description": "Navigation at sea and in systems. Ήρεμος, υπεύθυνος και ακριβής.",
+	"home_meta_url": "https://angelosk.gr",
+	
+	"hero_title": "Ήρεμος υπό πίεση.",
+	
+	"hero_name": "Angelos K.",
+	"hero_subtitle": "Navigation — at sea and in systems.",
+	"hero_cta_work": "Δουλειά",
+	"hero_cta_contact": "Επικοινωνία",
+
+	"hero_philosophy1": "Ήρεμος",
+	"hero_philosophy2": "Υπεύθυνος",
+	"hero_philosophy3": "Ακριβής",
+
+	"contact_title": "Επικοινωνία",
+	"contact_subtitle": "Στείλε μου ένα μήνυμα μέσω της παρακάτω φόρμας.",
+	"contact_form_thankyou": "Το μήνυμά σου στάλθηκε!",
+	"contact_form_name": "Όνομα",
+	"contact_form_email": "Email",
+	"contact_form_message": "Μήνυμα", 
+	"contact_form_submit": "Αποστολή"
+}
+

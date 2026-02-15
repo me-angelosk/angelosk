@@ -1,0 +1,33 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name} from en!",
+
+
+	"link_label_home": "Home",
+	"link_label_about": "About",
+	"link_label_work": "",
+	"link_label_contact": "Contact",
+	"link_label_privacy": "Privacy Policy",
+
+	"home_meta_title": "Angelos K.",
+	"home_meta_description": "Navigation at sea and in systems. Calm, responsible and precise.",
+	"home_meta_url": "https://angelosk.gr",
+
+	
+  "hero_title": "Calm under pressure.",
+  "hero_subtitle": "I navigate at sea and in systems.",
+	"hero_cta_work": "Work",
+	"hero_cta_contact": "Contact",
+	"hero_philosophy1": "Calm",
+	"hero_philosophy2": "Responsible",
+	"hero_philosophy3": "Precise",
+
+	
+	"contact_title": "Contact",
+	"contact_subtitle": "Send me a message using the form below.",
+	"contact_form_thankyou": "Your message has been sent!",
+	"contact_form_name": "Name",
+	"contact_form_email": "Email",
+	"contact_form_message": "Message", 
+	"contact_form_submit": "Send"
+}

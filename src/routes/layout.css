@@ -1,0 +1,29 @@
+@import url('../lib/styles/light.css') layer(material) (prefers-color-scheme: light);
+@import url('../lib/styles/dark.css') layer(material) (prefers-color-scheme: dark);
+
+@import 'tailwindcss' layer(framework);
+@import 'tw-prose';
+
+
+@layer framework, material, my-styles;
+
+/* @layer my-styles { */
+  /* Your styles here */
+/* } */
+
+
+:root {
+	--size-content-1: 20ch;
+	--size-content-2: 45ch;
+	--size-content-3: 60ch;
+	--size-content-4: 80ch;
+}
+
+@layer my-styles {
+	:root {
+		font-family: system-ui;
+		color-scheme: dark light;
+		background: var(--md-sys-color-background);
+		color: var(--md-sys-color-on-background);
+	}
+}
