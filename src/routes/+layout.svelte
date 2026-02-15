@@ -1,14 +1,21 @@
 <script lang="ts">
 	import { page } from "$app/state";
+	import { dev } from "$app/environment";
+	import { m } from "$lib/paraglide/messages";
 	import { locales, localizeHref } from "$lib/paraglide/runtime";
+	import { injectAnalytics } from '@vercel/analytics/sveltekit'
+
 	import "./layout.css";
 	import favicon from "$lib/assets/favicon.svg";
-	import NavBar from "$lib/components/NavBar.svelte";
+	
 	import type { LayoutProps } from "./$types";
-    import { m } from "$lib/paraglide/messages";
+
+	import NavBar from "$lib/components/NavBar.svelte";
 	// import AppLayout from "$lib/components/AppLayout.svelte";
 
 	let { children, data }: LayoutProps = $props();
+
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 </script>
 
 
