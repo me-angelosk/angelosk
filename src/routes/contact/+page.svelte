@@ -1,11 +1,8 @@
 <script lang="ts">
-    import { m } from "$lib/paraglide/messages";
+	import { m } from "$lib/paraglide/messages";
+	import { addMessage } from './data.remote';
 
-	const handleSubmit = () => {}
 
-	let name = $state('')
-	let email = $state('')
-	let message = $state('')
 </script>
 
 <section class="contact">
@@ -13,10 +10,31 @@
     <h2 class="contact-title">{m.contact_title()}</h2>
     <p class="contact-subtitle">{m.contact_subtitle()}</p>
 
-    <form class="contact-form" onsubmit={handleSubmit}>
-      <input type="text" placeholder={m.contact_form_name()} bind:value={name} required />
-      <input type="email" placeholder={m.contact_form_email()} bind:value={email} required />
-      <textarea placeholder={m.contact_form_message()} bind:value={message} required></textarea>
+    <form class="contact-form"  {...addMessage}>
+			<div class="flex flex-col">
+				<input {...addMessage.fields.name.as('text')} placeholder={m.contact_form_name()}  />
+				{#each addMessage.fields.name.issues() as issue}
+					<p class="issue">{issue.message}</p>
+				{/each}
+			</div>
+
+			<div class="flex flex-col">
+				<input  {...addMessage.fields.email.as('email')} placeholder={m.contact_form_email()}  />
+
+				{#each addMessage.fields.email.issues() as issue}
+					<p class="issue">{issue.message}</p>
+				{/each}
+			</div>
+
+
+			<div class="flex flex-col">
+				<textarea  {...addMessage.fields.message.as('text')} placeholder={m.contact_form_message()} ></textarea>
+
+				{#each addMessage.fields.message.issues() as issue}
+					<p class="issue">{issue.message}</p>
+				{/each}
+			</div>
+
       <button type="submit">{m.contact_form_submit()}</button>
     </form>
   </div>
@@ -24,14 +42,6 @@
 
 <style lang="css">
 .contact {
-  /* display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  padding: 4rem 2rem;
-  background-color: var(--md-sys-color-surface-container-low);
-  color: var(--md-sys-color-on-surface);
-  text-align: center; */
 	display: flex;
   align-items: center;
   justify-content: center;

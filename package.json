@@ -29,6 +29,7 @@
 		"@tabler/icons-svelte": "^3.36.1",
 		"@vercel/analytics": "^1.6.1",
 		"@vercel/functions": "^3.4.2",
-		"mongodb": "^7.1.0"
+		"mongodb": "^7.1.0",
+		"valibot": "^1.2.0"
 	}
 }

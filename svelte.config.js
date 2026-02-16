@@ -7,10 +7,17 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			'$schemas/*': 'src/schemas/*',
+		},
+		experimental: {
+			remoteFunctions: true
 		}
 	},
 	preprocess: [mdsvex()],
-	extensions: ['.svelte', '.svx']
+	extensions: ['.svelte', '.svx'],
+
+	compilerOptions: {
+		experimental: { async: true }
+	}
 };
 
 export default config;

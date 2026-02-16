@@ -29,5 +29,8 @@
 	"contact_form_name": "Name",
 	"contact_form_email": "Email",
 	"contact_form_message": "Message", 
-	"contact_form_submit": "Send"
+	"contact_form_submit": "Send",
+
+	"thx_contact_title": "Message resived",
+	"thx_contact_subtitle": "Thank you"
 }

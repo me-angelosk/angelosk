@@ -29,6 +29,9 @@
 	"contact_form_name": "Όνομα",
 	"contact_form_email": "Email",
 	"contact_form_message": "Μήνυμα", 
-	"contact_form_submit": "Αποστολή"
+	"contact_form_submit": "Αποστολή",
+
+	"thx_contact_title": "Λήψη επιβεβαιώθηκε",
+	"thx_contact_subtitle": "Ευχαριστώ"
 }
 

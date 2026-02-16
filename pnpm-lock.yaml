@@ -20,6 +20,9 @@ importers:
       mongodb:
         specifier: ^7.1.0
         version: 7.1.0
+      valibot:
+        specifier: ^1.2.0
+        version: 1.2.0(typescript@5.9.3)
     devDependencies:
       '@inlang/paraglide-js':
         specifier: ^2.10.0
@@ -1268,6 +1271,14 @@ packages:
     resolution: {integrity: sha512-XQegIaBTVUjSHliKqcnFqYypAd4S+WCYt5NIeRs6w/UAry7z8Y9j5ZwRRL4kzq9U3sD6v+85er9FvkEaBpji2w==}
     hasBin: true
 
+  valibot@1.2.0:
+    resolution: {integrity: sha512-mm1rxUsmOxzrwnX5arGS+U4T25RdvpPjPN4yR0u9pUBov9+zGVtO84tif1eY4r6zWxVxu3KzIyknJy3rxfRZZg==}
+    peerDependencies:
+      typescript: '>=5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   vfile-message@2.0.4:
     resolution: {integrity: sha512-DjssxRGkMvifUOJre00juHoP9DPWuzjxKuMDrhNbk2TdaYYBNMStsNhEOt3idrtI12VQYM/1+iM0KOzXi4pxwQ==}
 
@@ -2303,6 +2314,10 @@ snapshots:
   uuid@10.0.0: {}
 
   uuid@13.0.0: {}
+
+  valibot@1.2.0(typescript@5.9.3):
+    optionalDependencies:
+      typescript: 5.9.3
 
   vfile-message@2.0.4:
     dependencies:
