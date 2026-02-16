@@ -2,7 +2,7 @@
 	export type Link = {
 		href: string;
 		label: string;
-		icon: string;
+		icon: any;
 	};
 	type NavBarProps = {
 		closePopover?: () => void;
@@ -20,7 +20,7 @@
 <nav>
 	{#each links as link}
 		<a href={localizeHref(link.href, {locale: getLocale()})} class="link" onclick={closePopover}>
-			<span class="icon">{link.icon}</span>
+			<link.icon />
 			<span class="label">{link.label}</span>
 		</a>
 	{/each}
@@ -45,7 +45,7 @@ nav {
 .link {
 	display: inline flex;
 	align-items: center;
-	gap: .25rem;
+	gap: .5rem;
 	text-decoration: none;
 	border-radius: 0.25rem;
 

@@ -11,7 +11,12 @@ export const load = () => {
 			description: m.home_meta_description(),
 			url: m.home_meta_url()
 		},
-		links: siteStructure[getLocale()].navigation
+		// links: siteStructure[getLocale()].navigation
 
+		links: [
+			{ href: '/', label: m.link_label_home() },
+			{ href: '/about', label: m.link_label_about() },
+			{ href: '/contact', label: m.link_label_contact() },
+		]
 	}
 }

@@ -7,11 +7,11 @@
 
 	import "./layout.css";
 	import favicon from "$lib/assets/favicon.svg";
-	
+
 	import type { LayoutProps } from "./$types";
 
-	import NavBar from "$lib/components/NavBar.svelte";
-	// import AppLayout from "$lib/components/AppLayout.svelte";
+	import NavMenu from "$lib/components/NavBar.svelte";
+	import MenuIcon from "$lib/components/icons/menu-icon.svelte";
 
 	let { children, data }: LayoutProps = $props();
 
@@ -37,28 +37,19 @@
   <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<!-- 
-<AppLayout floatingNavbar>
-	{#snippet appNavigation()}
-		<NavBar links={[
-			{ href: '/', label: 'Home', icon: '🏠' },
-			{ href: '/about', label: 'About', icon: 'ℹ️' },
-			{ href: '/contact', label: 'Contact', icon: '📞' },
-		]} />
-	{/snippet}
 
-
-
-	
-</AppLayout> 
--->
-
-<button popovertarget="menu" popovertargetaction="toggle">Menu</button>
+<button popovertarget="menu" popovertargetaction="toggle" class="flex items-center gap-2">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" fill="currentColor" style="opacity:1;">
+		<path  d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32m0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32m448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32"/>
+	</svg>
+	<span>Menu</span>
+</button>
 <div id="menu" popover="auto" class="shadow">
-	<NavBar 
+	<NavMenu 
 		closePopover={() => document.getElementById("menu")?.hidePopover()} 
 		links={data.links} /> 
 </div>
+
 
 
 <main class="layout">
