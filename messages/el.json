@@ -10,7 +10,7 @@
 
 	"home_meta_title": "Angelos K.",
 	"home_meta_description": "Navigation at sea and in systems. Ήρεμος, υπεύθυνος και ακριβής.",
-	"home_meta_url": "https://angelosk.gr",
+	"home_meta_url": "https://www.angelosk.gr",
 	
 	"hero_title": "Ήρεμος υπό πίεση.",
 	
@@ -23,6 +23,8 @@
 	"hero_philosophy2": "Υπεύθυνος",
 	"hero_philosophy3": "Ακριβής",
 
+	"contact_meta_title": "Angelos K. | Φόρμα Επικοινωνίας",
+	"contact_meta_description": "",
 	"contact_title": "Επικοινωνία",
 	"contact_subtitle": "Στείλε μου ένα μήνυμα μέσω της παρακάτω φόρμας.",
 	"contact_form_thankyou": "Το μήνυμά σου στάλθηκε!",
@@ -34,4 +36,3 @@
 	"thx_contact_title": "Λήψη επιβεβαιώθηκε",
 	"thx_contact_subtitle": "Ευχαριστώ"
 }
-

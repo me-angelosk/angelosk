@@ -20,6 +20,10 @@
 }
 
 @layer my-styles {
+
+	@view-transition {
+		navigation: auto;
+	}
 	:root {
 		font-family: system-ui;
 		color-scheme: dark light;

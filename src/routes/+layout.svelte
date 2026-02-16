@@ -11,7 +11,6 @@
 	import type { LayoutProps } from "./$types";
 
 	import NavMenu from "$lib/components/NavBar.svelte";
-	import MenuIcon from "$lib/components/icons/menu-icon.svelte";
 
 	let { children, data }: LayoutProps = $props();
 
@@ -21,17 +20,17 @@
 
 
 <svelte:head>
-  <title>{data.meta.title}</title>
+  <title>{page.data.meta.title}</title>
 	<link rel="icon" href={favicon} />
-  <meta name="description" content={data.meta.description} />
+  <meta name="description" content={page.data.meta.description} />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#415F91" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content={data.meta.title} />
-  <meta property="og:description" content={data.meta.description} />
+  <meta property="og:title" content={page.data.meta.title} />
+  <meta property="og:description" content={page.data.meta.description} />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content={data.meta.url} />
+  <meta property="og:url" content={page.data.meta.url} />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />

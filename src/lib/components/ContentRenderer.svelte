@@ -4,11 +4,6 @@
 	let { content }: {content: PageContent} = $props();
 </script>
 
-<svelte:head>
-	<title>{content.meta.title}</title>
-	<meta name="description" content={content.meta.description} />
-</svelte:head>
-
 <h1>{content.meta.title}</h1>
 
 {#each content.sections as section (section.id)}
