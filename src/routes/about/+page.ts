@@ -59,13 +59,15 @@ const englishManifest = html`
 `.trim()
 
 
+const meta = {
+	title: getLocale() === 'el' ? 'Σχετικά με εμένα | Angelos K.' : 'About me | Angelos K.',
+	description: getLocale() === 'el' ? 'Μάθετε περισσότερα για την πορεία μου από εκπαιδευτής θαλάσσιων σπορ και καπετάνιος στη δημιουργία διαδικτυακών εφαρμογών με JavaScript και SvelteKit.' : 'Learn more about my journey from sea sports instructor and skipper to building web applications with JavaScript and SvelteKit.',
+	url: 'https://www.angelosk.gr/about'
+} 
+
 export const load = () => {
 	return {
-		meta: {
-			title: getLocale() === 'el' ? 'Angelos K. | Σχετικά με εμένα' : 'Angelos K. | About me',
-			description: '',
-			url: 'https://www.angelosk.gr/about'
-		},
+		meta,
 		title: getLocale() === 'el' ? 'Σχετικά με εμένα' : 'About me',
 		manifest: getLocale() === 'el' ? greekManifest : englishManifest
 	}
