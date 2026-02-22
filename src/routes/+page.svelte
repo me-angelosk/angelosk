@@ -1,8 +1,6 @@
 <script lang="ts">
-    import { m } from "$lib/paraglide/messages";
-    import { localizeHref } from "$lib/paraglide/runtime";
-
-
+	import { m } from "$lib/paraglide/messages";
+	import { localizeHref } from "$lib/paraglide/runtime";
 </script>
 
 <section class="hero">

@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/state";
-	import { dev } from "$app/environment";
 	import { m } from "$lib/paraglide/messages";
 	import { locales, localizeHref } from "$lib/paraglide/runtime";
-	import { injectAnalytics } from '@vercel/analytics/sveltekit'
 
 	import "./layout.css";
 	import favicon from "$lib/assets/favicon.svg";
@@ -11,29 +9,56 @@
 	import type { LayoutProps } from "./$types";
 
 	import NavMenu from "$lib/components/NavBar.svelte";
+	import LangSwitch from "$lib/components/LangSwitch.svelte";
 
 	let { children, data }: LayoutProps = $props();
 
-	injectAnalytics({ mode: dev ? 'development' : 'production' });
+
+	const baseUrl = 'https://www.angelosk.gr';
+	let canonical = $derived(`${baseUrl}${page.url.pathname}`)
+	const personSchema = {
+		"@context": "https://schema.org",
+		"@type": "Person",
+		name: "Αγγελος Κουλουρης",
+		url: baseUrl,
+		jobTitle: "Skipper | Driver | JavaScript Developer",
+		address: {
+			"@type": "PostalAddress",
+			addressCountry: "GR"
+		}
+	};
 </script>
 
 
 
 <svelte:head>
-  <title>{page.data.meta.title}</title>
-	<link rel="icon" href={favicon} />
-  <meta name="description" content={page.data.meta.description} />
+	{#if page.data.meta}
+	{@const seo =  page.data.meta}
+	<title>{seo.title}</title>
+  <meta name="description" content={seo.description} />
+	<link rel="canonical" href={canonical} />
+	
+	<!-- Open Graph -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content={seo.title} />
+	<meta property="og:description" content={seo.description} />
+	<meta property="og:url" content={seo.url} />
+	<!-- <meta property="og:image" content={baseUrl + '/og-image.jpg'} /> -->
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={seo.title} />
+	<meta name="twitter:description" content={seo.description} />
+	<!-- <meta name="twitter:image" content={baseUrl + '/og-image.jpg'} /> -->
+	{/if}
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#415F91" />
+	<link rel="icon" href={favicon} />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content={page.data.meta.title} />
-  <meta property="og:description" content={page.data.meta.description} />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content={page.data.meta.url} />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+		{@html JSON.stringify(personSchema)}
+	</script>
 </svelte:head>
 
 
@@ -56,6 +81,9 @@
 </main>
 
 <footer>
+
+	<LangSwitch />
+
 	<a href={localizeHref("/privacy-policy")}>{m.link_label_privacy()}</a>
 </footer>
 
@@ -122,7 +150,7 @@
 	footer {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: space-between;
 		position: fixed;
 		bottom: 0;
 		left: 0;
