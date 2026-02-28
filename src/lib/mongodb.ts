@@ -8,7 +8,7 @@ if (!MONGODB_URI) {
 
 //@ts-ignore
 const options: MongoClientOptions = {
-  appName: "devrel.template.vercel-better-auth",
+  appName: "angelosk",
   maxIdleTimeMS: 5000,
 };
 

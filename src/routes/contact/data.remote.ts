@@ -23,7 +23,7 @@ export const addMessage = form(
 		try {
 			// Insert into the database
 			const db = await getDatabase()
-			db.collection('contactMessages').insertOne({
+			await db.collection('contactMessages').insertOne({
 				name, email, message, createdAt: new Date().toISOString() 
 			})
 
