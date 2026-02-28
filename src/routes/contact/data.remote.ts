@@ -1,7 +1,7 @@
 import * as v from 'valibot';
 import { form } from "$app/server";
 import { redirect, error } from '@sveltejs/kit';
-import { getDatabase } from '$lib/components/mongodb';
+import { getDatabase } from '$lib/mongodb';
 import { getLocale, localizeHref } from '$lib/paraglide/runtime';
 
 
